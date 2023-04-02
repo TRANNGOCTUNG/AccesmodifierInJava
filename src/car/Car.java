@@ -1,2 +1,34 @@
-package car;public class Car {
+package car;
+
+public class Car {
+    private String name;
+    private String engine;
+    public static int numberOfCars;
+
+    public Car(String name, String engine) {
+        this.name = name;
+        this.engine = engine;
+        numberOfCars++;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEngine() {
+        return engine;
+    }
+
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+
+    public boolean display(){
+        System.out.printf("%6s %10s %14s \n",name,engine,numberOfCars);
+        return true;
+    }
 }
